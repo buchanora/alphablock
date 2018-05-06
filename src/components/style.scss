@@ -1,0 +1,123 @@
+// @import './DateField/style';
+
+//**** Primary row wrapper***//
+  .expanded{
+    width: 100%;
+  }
+  .section{
+    display: flex;
+    flex-direction:  column;
+  }
+  //**** Full width (No Padding) row wrapper ***//
+  .section-stretch{
+    align-items: stretch;
+  }
+  .section-centralized{
+    justify-content: center;
+  }
+  // make row content to flow horizontally on wide screens
+  .section-row{
+    @include breakpoint(medium){
+      flex-direction: row;
+    }
+  }
+  .section-column{
+    flex-direction: column;
+  }
+  //**** Used to make sections Occupy the full height ****//
+  .section-expand{
+    flex: 1;
+  }
+  .section-padding{
+    padding: 30px 15px;
+    @include breakpoint(medium){
+      padding: 60px;
+    };
+  }
+  .contained-section{
+    width: 100%;
+    margin: 0 auto;
+    @include breakpoint(large){
+        width: $wrap-width;
+        max-width: $wrap-max;
+    }
+  }
+  .contained-section.section-padding{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .centered-text-section{
+    text-align: center;
+  }
+  .block{
+    display: block;
+  }
+  .block-flex{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    @include breakpoint(medium){
+      flex-direction: row;
+      align-items: stretch;
+    };
+  }
+  .block-expand{
+    flex: 1;
+  }
+  .section-row .block-padded{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .section-row .block-padded:first-of-type{
+    padding-left: 0;
+  }
+  .section-row .block-padded:last-of-type{
+    padding-right: 0;
+  }
+  .block-divider.block-padded{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .block-divider{
+    border-bottom: 1px solid $color-gray-4;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    margin-bottom: 15px;
+  }
+  .block-divider:first-of-type{
+    padding-top: 30px;
+  }
+  .block-divider:last-of-type{
+    border-bottom: none;
+  }
+  .wrap{
+    width: 100%;
+    margin: 0 auto;
+    @include breakpoint(large){
+        width: $wrap-width;
+        max-width: $wrap-max;
+    }
+  }
+  
+  .small-wrap{
+    @include breakpoint(large){
+        max-width: 360px;
+    }
+  }
+  .medium-wrap{
+    @include breakpoint(large){
+        max-width: 520px;
+    }
+  }
+  .large-wrap{
+    @include breakpoint(large){
+      max-width: $wrap-max;
+    }
+  }
+  
+  .padding{
+    padding-bottom: 30px;
+  }
+  .padding-top{
+    padding-top: 30px;
+  }
